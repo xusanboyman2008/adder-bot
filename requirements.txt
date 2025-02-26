@@ -2,3 +2,4 @@ Telethon~=1.39.0
 SQLAlchemy~=2.0.36
 aiogram
 sqlparse
+aiosqlite
