@@ -126,7 +126,7 @@ async def ch(call: CallbackQuery):
     channel = await me(call.from_user.id, data)
     channel_name = await bot.get_chat(chat_id=data)
     if channel:
-        text = (f'📢 Kanal nomi: <a href="{get_channel_link(data)}">{channel_name.full_name}</a>\n\n'
+        text = (f'📢 Kanal nomi: <a href="{await get_channel_link(data)}">{channel_name.full_name}</a>\n\n'
                 f"<a href='tg://user?id={call.from_user.id}'>{(await get_or_create_user(call.from_user.id)).name}</a> - <code>{channel.count}</code> ta odam qo\'shgansiz")
         await call.message.edit_text(text=text + '\n\n/start botni boshqatan boshlash uchun',parse_mode="HTML")
     else:
