@@ -4,3 +4,6 @@ aiogram
 sqlparse
 aiosqlite
 telebot
+pytz
+apscheduler
+asyncio
