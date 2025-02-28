@@ -4,8 +4,7 @@ from sqlalchemy.orm import DeclarativeBase
 
 
 # DATABASE_URL = "postgresql+asyncpg://neondb_owner:npg_RkIy9Ctf5bph@ep-fragrant-butterfly-a8t65nyw-pooler.eastus2.azure.neon.tech/neondb?ssl=require"
-DATABASE_URL = "sqlite+aiosqlite:///db.sqlite3"
-# FIX: Use connect_args instead of "sslmode=require"
+DATABASE_URL = "postgresql+asyncpg://neondb_owner:npg_RkIy9Ctf5bph@ep-fragrant-butterfly-a8t65nyw-pooler.eastus2.azure.neon.tech/neondb"# FIX: Use connect_args instead of "sslmode=require"
 engine = create_async_engine(
     DATABASE_URL,
 )
