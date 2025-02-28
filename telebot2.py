@@ -64,8 +64,8 @@ def add(message):
             for i in ready[0]:
                 text += i
             bot.send_message(message.chat.id, text)
-
-        bot.send_message(message.chat.id, f"Muvaffaqiyatli kirgan loginlar soni ✅ {ready[1]}")
+        if int(ready[1]) !=0:
+            bot.send_message(message.chat.id, f"Muvaffaqiyatli kirgan loginlar soni ✅ {ready[1]}")
 
         markup = InlineKeyboardMarkup()
         markup.add(InlineKeyboardButton("Ha ✅", callback_data="t_yes"),
